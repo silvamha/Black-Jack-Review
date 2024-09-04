@@ -1,0 +1,6 @@
+vite.config.js
+package.json
+*.md
+*.txt
+*.pdf
+*.zip
