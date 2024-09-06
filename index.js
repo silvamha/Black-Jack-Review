@@ -2,7 +2,7 @@
 // Set their values to a random number between 2-11
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
-import  myPoints  from "./myPoints.js";
+import  myPoints, {addPoints, removePoints} from "./myPoints.js";
 
 let fistCard = 6
 let secondCard = 15
@@ -24,3 +24,8 @@ console.log(sum)
 // let sum1 = num1 + num2; // Perform the calculation
 
 // alert("The sum is: " + sum1); // Display the result in an alert box
+
+const updatePoints = addPoints(12)
+const lowerPoints = removePoints(1)
+
+console.log(updatePoints)
