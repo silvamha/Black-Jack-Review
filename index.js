@@ -42,3 +42,15 @@ const remove1Point = () => {
 
 console.log(myPoints);
 console.log(myPoints);
+
+console.log(typeof ("2" + 2));
+console.log(typeof (11 + 7));
+console.log(typeof (6 + "5"));
+console.log(typeof ("My points: " + (5 + 9)));
+console.log(typeof (2 + 2));
+console.log(typeof ("11" + "14"));
+
+// 50 + 10 / 8 + 2 =
+// PEMDAS
+let myCalc = 50 + 10 / 8 + 2;
+console.log(myCalc);
