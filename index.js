@@ -2,8 +2,7 @@
 // Set their values to a random number between 2-11
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
-
-
+const changeColor = document.querySelector("body");
 
 let fistCard = 6
 let secondCard = 15
@@ -19,9 +18,9 @@ if (sum < 21) {
 
 console.log(sum)
 
-let num1 = parseFloat(prompt("Enter the first number:")); // Get first number from user
-let num2 = parseFloat(prompt("Enter the second number:")); // Get second number from user
+// let num1 = parseFloat(prompt("Enter the first number:")); // Get first number from user
+// let num2 = parseFloat(prompt("Enter the second number:")); // Get second number from user
 
-let sum1 = num1 + num2; // Perform the calculation
+// let sum1 = num1 + num2; // Perform the calculation
 
-alert("The sum is: " + sum1); // Display the result in an alert box
+// alert("The sum is: " + sum1); // Display the result in an alert box
