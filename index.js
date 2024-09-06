@@ -3,6 +3,7 @@
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
 const changeColor = document.querySelector("body");
+changeColor = style.bakcgroundColor = "red";
 
 let fistCard = 6
 let secondCard = 15
