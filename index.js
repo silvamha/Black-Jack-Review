@@ -77,10 +77,11 @@ const foodCost = 50;
 
 // console.log(totalCost)
 
-const hotelCost = (tripLengthDays*hotelCostPerNight) - (hotelDiscountPerNight*2)
-const drivingCost = (tripDistanceKM*fuelPricePerKM)
-const totalCost = hotelCost+drivingCost+foodCost
+const hotelCost =
+  tripLengthDays * hotelCostPerNight - hotelDiscountPerNight * tripLengthDays;
+const drivingCost = tripDistanceKM * fuelPricePerKM;
+const totalCost = hotelCost + drivingCost + foodCost;
 
-console.log(`The hotel cost is  ${hotelCost}`)
-console.log(`The driving cost is ${drivingCost}`)
-console.log(`The total cost of the trip is ${totalCost}`)
+console.log(`The hotel cost is  ${hotelCost}`);
+console.log(`The driving cost is ${drivingCost}`);
+console.log(`The total cost of the trip is ${totalCost}`);
