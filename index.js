@@ -9,23 +9,18 @@ let secondCard = 11;
 let sum = fistCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
-let msg = ""
+let message = "";
 
 if (sum < 21) {
-  console.log("Do you want to draw a new card? 🙂");
-  msg = "Sorry, you don't have Black Jack!"
-
+  message = "Do you want to draw a new card? 🙂";
 } else if (sum === 21) {
-  console.log("Wohoo! You've got Blackjack! 🥳");
+  message = "Wohoo! You've got Blackjack! 🥳";
   hasBlackJack = true;
-  msg = "You have Black Jack!"
-
 } else {
-  console.log("You're out of the game! 😭");
+  message = "You're out of the game! 😭";
   isAlive = false;
-  msg = "Sorry! You are out of the game!"
 }
 
 console.log(`Do I have Black Jack? ${hasBlackJack}`);
-console.log(`Am I still on the game? ${isAlive}`)
-console.log(msg)
+console.log(`Am I still on the game? ${isAlive}`);
+console.log(message);
