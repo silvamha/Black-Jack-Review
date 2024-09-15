@@ -43,3 +43,5 @@ newCardBtn.addEventListener('click', () => {
   cardsEl.textContent=""
   sumEl.textContent=""
 })
+
+// Comments go here
