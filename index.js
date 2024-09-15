@@ -7,12 +7,13 @@
 const titleEl = document.querySelector("#title-el");
 const headerEl = document.querySelector("#header-el");
 const messageEl = document.querySelector("#message-el");
-const cardsEl = document.querySelector("#sum-el");
+const cardsEl = document.querySelector("#cards-el");
 const sumEl = document.querySelector("#sum-el");
 const startGameBtn = document.querySelector("#start-game-btn");
+const newCardBtn = document.querySelector("#new-card-btn");
 
-let firstCard = 10;
-let secondCard = 11;
+let firstCard = Math.floor(Math.random() * 10) + 1;
+let secondCard = Math.floor(Math.random() * 10) + 1;
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -28,10 +29,17 @@ startGameBtn.addEventListener("click", () => {
     message = "You're out of the game! 😭";
     isAlive = false;
   }
+  cardsEl.textContent=`Cards: ${firstCard} - ${secondCard}`
+  sumEl.textContent=`Sum: ${sum}`
+  messageEl.textContent=message
   console.log(`Do I have Black Jack? ${hasBlackJack}`);
-console.log(`Am I still on the game? ${isAlive}`);
-console.log(message);
+  console.log(`Am I still on the game? ${isAlive}`);
+  console.log(message);
 });
 // sumEl.textContent=`Sum: ${sum}`
 
-
+newCardBtn.addEventListener('click', () => {
+  messageEl.textContent=`Drawing a new card!`
+  cardsEl.textContent=""
+  sumEl.textContent=""
+})
