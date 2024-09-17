@@ -44,5 +44,7 @@ newCardBtn.addEventListener('click', () => {
   sumEl.textContent=""
 })
 
-// Comments below
+const newCardFunction = () => {
+  console.log("Drawing a new card from the deck!");
+};
 
