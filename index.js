@@ -78,9 +78,18 @@ professionalExperience.forEach((job, index) => {
 
 let mixedArray = ["string", 1, true, "hello"];
 
+const randomNumber = 10;
+const randomString= "pushing a random string to the array";
+const randomBoolean = true;
+
+mixedArray.push(randomNumber, randomString, randomBoolean);
+
+
+
 const iterateMixedArray = () => {
   for (let i = 0; i < mixedArray.length; i++) {
     console.log(mixedArray[i]);
   }
 };  
 
+iterateMixedArray();
