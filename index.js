@@ -58,10 +58,12 @@ const renderGame = () => {
 };
 startGameBtn.addEventListener("click", () => {
   renderGame();
+  console.log("startGame() called by startGameBtn.addEventListener()");
 });
 
 newCardBtn.addEventListener("click", () => {
   newCard();
+  console.log("newCard() called by newCardBtn.addEventListener()");
 });
 
 const newCard = () => {
@@ -70,6 +72,7 @@ const newCard = () => {
   cards.push(card);
   console.log(cards);
   renderGame();
+  console.log("newCard() called by renderGame()");
 };
 
 let myArray = [];
