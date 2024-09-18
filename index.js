@@ -21,6 +21,17 @@ let hasBlackJack = false;
 let isAlive = true;
 let message = "";
 
+const getRandomCard = () => {
+  let randomCard = Math.floor(Math.random() * 13) + 1;
+  if (randomCard > 10) {
+    return 10;
+  } else if (randomCard === 1) {
+    return 11;
+  } else {
+    return randomCard;
+  }
+};
+
 const startGame = () => {
   renderGame();
 };
@@ -34,7 +45,11 @@ const renderGame = () => {
     message = "You're out of the game! 😭";
     isAlive = false;
   }
-  cardsEl.textContent = `Cards: ${cards[0]} - ${cards[1]}`;
+  cardsEl.textContent = `Cards: `;
+  for (let i=0; i<cards.length; i++) {
+    cardsEl.textContent += cards[i] + "_";
+  }
+  // cardsEl.textContent = `Cards: ${cards}`;
   sumEl.textContent = `Sum: ${sum}`;
   messageEl.textContent = message;
   console.log(`Do I have Black Jack? ${hasBlackJack}`);
@@ -50,46 +65,16 @@ newCardBtn.addEventListener("click", () => {
 });
 
 const newCard = () => {
-  let card = 7;
+  let card = Math.floor(Math.random() * 10) + 1;
   sum += card;
+  cards.push(card);
+  console.log(cards);
   renderGame();
 };
 
-/**!SECTION
- * For testing purposes
- * Create an array of professional experience
- *
- */
-
-let professionalExperience = ["banking", "healthcare", "teaching English"];
-
-const iterateProfessionalExperience = () => {
-  for (let i = 0; i < professionalExperience.length; i++) {
-    console.log(professionalExperience[i]);
-  }
-};
-
-/** !SECTION
- *
- */
-professionalExperience.forEach((job, index) => {
-  console.log(`The experience is in ${job}, and the index # is: ${index}`);
-});
-
-let mixedArray = ["string", 1, true, "hello"];
-
-const randomNumber = 10;
-const randomString= "pushing a random string to the array";
-const randomBoolean = true;
-
-mixedArray.push(randomNumber, randomString, randomBoolean);
-
-
-
-const iterateMixedArray = () => {
-  for (let i = 0; i < mixedArray.length; i++) {
-    console.log(mixedArray[i]);
-  }
-};  
-
-iterateMixedArray();
+let myArray = [];
+for (let i = 10; i <= 100; i += 10) {
+  myArray.push(i);
+  console.log(i);
+  console.log(myArray);
+}
