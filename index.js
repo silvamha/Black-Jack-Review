@@ -12,8 +12,6 @@ const sumEl = document.querySelector("#sum-el");
 const startGameBtn = document.querySelector("#start-game-btn");
 const newCardBtn = document.querySelector("#new-card-btn");
 
-let firstCard = Math.floor(Math.random() * 10) + 1;
-let secondCard = Math.floor(Math.random() * 10) + 1;
 let cards = [firstCard, secondCard];
 let card = 7;
 let sum = firstCard + secondCard;
@@ -33,6 +31,8 @@ const getRandomCard = () => {
 };
 
 const startGame = () => {
+  let firstCard = Math.floor(Math.random() * 10) + 1;
+  let secondCard = Math.floor(Math.random() * 10) + 1;
   renderGame();
 };
 const renderGame = () => {
@@ -75,16 +75,12 @@ const newCard = () => {
   console.log("newCard() called by renderGame()");
 };
 
-
-
 myArrowFunction = () => {
   console.log("Hello World");
 };
-(() =>{
+() => {
   console.log("Hello World");
-})
+};
 
-let randomNumber =Math.floor(Math.random()*13) +1
+let randomNumber = Math.floor(Math.random() * 13) + 1;
 // console.log(randomNumber)
-
-
