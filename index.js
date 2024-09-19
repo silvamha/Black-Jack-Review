@@ -46,7 +46,7 @@ const renderGame = () => {
     isAlive = false;
   }
   cardsEl.textContent = `Cards: `;
-  for (let i=0; i<cards.length; i++) {
+  for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += cards[i] + "_";
   }
   // cardsEl.textContent = `Cards: ${cards}`;
@@ -75,23 +75,3 @@ const newCard = () => {
   console.log("newCard() called by renderGame()");
 };
 
-// let myArray = [];
-// for (let i = 10; i <= 100; i += 10) {
-//   myArray.push(i);
-//   console.log(i);
-//   console.log(myArray);
-// }
-
-
-// const returnMessage = (message) => {
-// return message = 'This is only a test'
-// }
-
-// console.log(returnMessage('no matter what I put here it will return the value stored in the message variable'))
-
-let player1Time = 102;
-let player2Time = 107;
-
-const getFastestRaceTime = (player1Time, player2Time, player3Time) => {
-  if (player1Time < player2Time
-}
