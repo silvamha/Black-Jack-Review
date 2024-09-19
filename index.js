@@ -81,3 +81,23 @@ for (let i = 10; i <= 100; i += 10) {
   console.log(i);
   console.log(myArray);
 }
+
+
+const returnMessage = (message) => {
+return message = 'This is only a test'
+}
+
+console.log(returnMessage('no matter what I put here it will return the value stored in the message variable'))
+
+let player1Time = 102;
+let player2Time = 107;
+let player3Time = 105;
+
+const fastestPlayer = (a, b) =>{
+  if(player1Time > player2Time){
+    return `${player1Time} is the fastest`
+  }
+  
+}
+
+fastestPlayer()
