@@ -67,11 +67,24 @@ newCardBtn.addEventListener("click", () => {
 });
 
 const newCard = () => {
-  let card = Math.floor(Math.random() * 10) + 1;
+  let card = Math.floor(Math.random() * 13) + 1;
   sum += card;
   cards.push(card);
   console.log(cards);
   renderGame();
   console.log("newCard() called by renderGame()");
 };
+
+
+
+myArrowFunction = () => {
+  console.log("Hello World");
+};
+(() =>{
+  console.log("Hello World");
+})
+
+let randomNumber =Math.floor(Math.random()*13) +1
+// console.log(randomNumber)
+
 
