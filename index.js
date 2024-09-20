@@ -18,7 +18,7 @@ let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
 let message = "";
-console.log(cards);
+// console.log(cards);
 const getRandomCard = () => {
   let randomCard = Math.floor(Math.random() * 13) + 1;
   if (randomCard > 10) {
@@ -90,3 +90,19 @@ const newCard = () => {
   renderGame();
   console.log("newCard() called by renderGame()");
 };
+
+let hasCompletedCourse = true;
+let givesCertificate = true;
+
+function generateCertificate() {
+  console.log("Generating certificate....");
+}
+
+function completeCourse() {
+  let msg = "The student gets a certificate"
+    ? hasCompletedCourse && givesCertificate:
+    console.log(msg)
+
+}
+
+completeCourse()
