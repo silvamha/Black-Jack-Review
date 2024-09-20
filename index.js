@@ -84,44 +84,11 @@ newCardBtn.addEventListener("click", () => {
 
 const newCard = () => {
   let card = getRandomCard();
-  sum += card;
-  cards.push(card);
-  console.log(cards);
+  if (isAlive && !hasBlackJack) {
+    sum += card;
+    cards.push(card);
+  }
   renderGame();
+  console.log(cards);
   console.log("newCard() called by renderGame()");
 };
-
-let hasCompletedCourse = true;
-let givesCertificate = true;
-
-function generateCertificate() {
-  console.log("Generating certificate....");
-}
-
-let hasSolvedChallenge = false
-let hasHintsLeft = false
-
-// Create an if statement that checks that both variables are false.
-// If so, run the showSolution() function
-
-function showSolution() {
-  if(!hasSolvedChallenge && !hasHintsLeft)
-    console.log("Showing the solution....")
-}
-
-showSolution()
-
-// Create two boolean variables, likesDocumentaries and likesStartups
-// Use an OR statement (||) to call recommendMovie() if either of those variables are true
-
-let likesStartups = true
-
-let likesDocumentaries = true
-function recommendMovie() {
-  if (likesStartups || likesDocumentaries){
-      console.log("Hey, check out this new film we think you will like!")
-  }
-
-}
-
-recommendMovie()
