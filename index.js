@@ -4,21 +4,21 @@
 // 2. Create a variable, sum, and set it to the sum of the two cards
 // import  myPoints, {addPoints, removePoints} from "./myPoints.js";
 
-const titleEl = document.querySelector("#title-el");
-const headerEl = document.querySelector("#header-el");
-const messageEl = document.querySelector("#message-el");
-const cardsEl = document.querySelector("#cards-el");
-const sumEl = document.querySelector("#sum-el");
-const startGameBtn = document.querySelector("#start-game-btn");
-const newCardBtn = document.querySelector("#new-card-btn");
+let titleEl = document.querySelector("#title-el");
+let headerEl = document.querySelector("#header-el");
+let messageEl = document.querySelector("#message-el");
+let cardsEl = document.querySelector("#cards-el");
+let sumEl = document.querySelector("#sum-el");
+let startGameBtn = document.querySelector("#start-game-btn");
+let newCardBtn = document.querySelector("#new-card-btn");
 
-let cards = [firstCard, secondCard];
-let card = 7;
-let sum = firstCard + secondCard;
+let cards = [];
+// let card = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
-
+console.log(cards);
 const getRandomCard = () => {
   let randomCard = Math.floor(Math.random() * 13) + 1;
   if (randomCard > 10) {
@@ -31,8 +31,13 @@ const getRandomCard = () => {
 };
 
 const startGame = () => {
-  let firstCard = Math.floor(Math.random() * 10) + 1;
-  let secondCard = Math.floor(Math.random() * 10) + 1;
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
+  isAlive = true;
+  hasBlackJack = false;
+
   renderGame();
 };
 const renderGame = () => {
@@ -57,7 +62,18 @@ const renderGame = () => {
   console.log(message);
 };
 startGameBtn.addEventListener("click", () => {
+  if (isAlive === false) {
+    startGame();
+    console.log("startGame() called by startGameBtn.addEventListener()");
+  } else {
+    newCard();
+    console.log("newCard() called by startGameBtn.addEventListener()");
+  }
   renderGame();
+  cardsEl.textContent = "Cards: ";
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " ";
+  }
   console.log("startGame() called by startGameBtn.addEventListener()");
 });
 
@@ -67,20 +83,10 @@ newCardBtn.addEventListener("click", () => {
 });
 
 const newCard = () => {
-  let card = Math.floor(Math.random() * 13) + 1;
+  let card = getRandomCard();
   sum += card;
   cards.push(card);
   console.log(cards);
   renderGame();
   console.log("newCard() called by renderGame()");
 };
-
-myArrowFunction = () => {
-  console.log("Hello World");
-};
-() => {
-  console.log("Hello World");
-};
-
-let randomNumber = Math.floor(Math.random() * 13) + 1;
-// console.log(randomNumber)
