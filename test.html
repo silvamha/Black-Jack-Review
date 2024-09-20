@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Player Embed</title>
+<style>
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="video-container">
+  <iframe 
+    src="/assets/sounds/idioms.wav" 
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+</body>
+</html>
