@@ -4,3 +4,6 @@ package.json
 *.txt
 *.pdf
 *.zip
+*.wav
+*.mp3
+*.mp4
